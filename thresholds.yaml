@@ -1,0 +1,15 @@
+# Evaluation & Regression Detection Thresholds
+
+# Maximum allowed drop in pass rate before triggering a warning (3%)
+warn_threshold: 0.03
+
+# Maximum allowed drop in pass rate before triggering a critical failure & blocking CI (8%)
+critical_threshold: 0.08
+
+# Drift detection configuration
+drift_window: 7     # Number of historical runs to average
+drift_floor: 0.90    # Alert if rolling average pass rate falls below 90%
+
+# Concurrency & Performance
+max_concurrency: 8
+timeout_seconds: 30

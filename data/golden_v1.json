@@ -1,0 +1,446 @@
+{
+  "dataset_version": "1.0",
+  "description": "Hand-labeled ground-truth evaluation dataset for customer email triage",
+  "cases": [
+    {
+      "id": "case_001",
+      "email": "Hi, I was billed $49 yesterday but my contracted plan is $29/month. Please refund the $20 difference immediately.",
+      "expected_category": "billing",
+      "expected_summary": "Customer disputes an overcharge of $20 and requests a refund.",
+      "difficulty": "easy",
+      "notes": "Clear overcharge and refund request"
+    },
+    {
+      "id": "case_002",
+      "email": "Can someone email me the VAT invoice for order #INV-98234? Our accounting team needs it for quarterly tax filing.",
+      "expected_category": "billing",
+      "expected_summary": "Customer requests a VAT invoice for order #INV-98234 for tax filing.",
+      "difficulty": "easy",
+      "notes": "Direct invoice request"
+    },
+    {
+      "id": "case_003",
+      "email": "My company credit card expired. Where in the billing dashboard can I update the expiration date and CVC?",
+      "expected_category": "billing",
+      "expected_summary": "Customer asks how to update payment card details in the billing dashboard.",
+      "difficulty": "easy",
+      "notes": "Payment method update inquiry"
+    },
+    {
+      "id": "case_004",
+      "email": "We want to upgrade from the Starter Tier to the Enterprise Tier for 45 seats. Could you provide a quote?",
+      "expected_category": "billing",
+      "expected_summary": "Customer requests an enterprise pricing quote to upgrade 45 seats.",
+      "difficulty": "medium",
+      "notes": "Upgrade inquiry involving sales and billing"
+    },
+    {
+      "id": "case_005",
+      "email": "You charged my card twice for the annual renewal on Nov 3rd. Please cancel the duplicate transaction.",
+      "expected_category": "billing",
+      "expected_summary": "Customer was double-charged for an annual subscription and asks to cancel the duplicate charge.",
+      "difficulty": "easy",
+      "notes": "Duplicate billing complaint"
+    },
+    {
+      "id": "case_006",
+      "email": "I cancelled my subscription three weeks ago within the 30-day money-back window but haven't received my money back.",
+      "expected_category": "billing",
+      "expected_summary": "Customer follows up on a missing refund for a cancelled subscription.",
+      "difficulty": "medium",
+      "notes": "Refund status inquiry"
+    },
+    {
+      "id": "case_007",
+      "email": "Please downgrade our plan back to Basic starting next billing cycle. We don't need Pro features anymore.",
+      "expected_category": "billing",
+      "expected_summary": "Customer requests a plan downgrade to Basic effective next billing cycle.",
+      "difficulty": "easy",
+      "notes": "Subscription downgrade"
+    },
+    {
+      "id": "case_008",
+      "email": "Why is there an unexplained $15 surcharge listed as 'Cloud Processing Fee' on our October statement?",
+      "expected_category": "billing",
+      "expected_summary": "Customer inquires about an unexpected $15 processing surcharge on their statement.",
+      "difficulty": "easy",
+      "notes": "Line-item fee dispute"
+    },
+    {
+      "id": "case_009",
+      "email": "Do you offer non-profit or educational discounts for 501(c)(3) organizations?",
+      "expected_category": "billing",
+      "expected_summary": "Customer inquires about non-profit or educational pricing discounts.",
+      "difficulty": "easy",
+      "notes": "Discount policy inquiry"
+    },
+    {
+      "id": "case_010",
+      "email": "Our bank blocked the auto-debit because our corporate fraud alert triggered. Can you re-run the transaction now that we cleared it?",
+      "expected_category": "billing",
+      "expected_summary": "Customer asks to retry a failed auto-debit transaction after clearing a bank fraud alert.",
+      "difficulty": "medium",
+      "notes": "Payment retry request"
+    },
+    {
+      "id": "case_011",
+      "email": "Can you change our billing cycle from monthly to annual to take advantage of the 20% discount?",
+      "expected_category": "billing",
+      "expected_summary": "Customer requests switching from a monthly to an annual billing cycle.",
+      "difficulty": "easy",
+      "notes": "Billing cadence change"
+    },
+    {
+      "id": "case_012",
+      "email": "Need W-9 form from your company before our procurement department can issue payment.",
+      "expected_category": "billing",
+      "expected_summary": "Customer requests a W-9 form for vendor onboarding and payment processing.",
+      "difficulty": "easy",
+      "notes": "Tax form request"
+    },
+    {
+      "id": "case_013",
+      "email": "The webhook endpoint is returning HTTP 500 status codes on every POST payload since 14:00 UTC.",
+      "expected_category": "technical",
+      "expected_summary": "Customer reports that webhook endpoints are throwing HTTP 500 errors on all POST requests.",
+      "difficulty": "easy",
+      "notes": "API technical failure"
+    },
+    {
+      "id": "case_014",
+      "email": "Whenever we attempt to export CSV files with more than 10,000 rows, the browser tab freezes and crashes.",
+      "expected_category": "technical",
+      "expected_summary": "Customer reports browser crashes when exporting CSV datasets larger than 10,000 rows.",
+      "difficulty": "easy",
+      "notes": "Frontend memory leak / crash"
+    },
+    {
+      "id": "case_015",
+      "email": "Our production database integration keeps throwing 'ConnectionPoolTimeoutException: timeout waiting for idle connection'.",
+      "expected_category": "technical",
+      "expected_summary": "Customer encounters a database connection pool timeout exception in production.",
+      "difficulty": "easy",
+      "notes": "Infrastructure timeout error"
+    },
+    {
+      "id": "case_016",
+      "email": "great, ANOTHER outage. love paying for this rock-solid 99.9% uptime.",
+      "expected_category": "technical",
+      "expected_summary": "Customer sarcastically complains about an ongoing service outage.",
+      "difficulty": "hard",
+      "notes": "Sarcastic tone; could be misinterpreted as general complaint or billing"
+    },
+    {
+      "id": "case_017",
+      "email": "API response latency has spiked from 120ms to over 3500ms in the us-east-1 region this morning.",
+      "expected_category": "technical",
+      "expected_summary": "Customer reports a severe API latency spike in the us-east-1 region.",
+      "difficulty": "easy",
+      "notes": "Performance degradation report"
+    },
+    {
+      "id": "case_018",
+      "email": "Your Python SDK version 2.4.1 throws an AttributeError: 'Client' object has no attribute 'stream_events'.",
+      "expected_category": "technical",
+      "expected_summary": "Customer reports an AttributeError in Python SDK v2.4.1.",
+      "difficulty": "easy",
+      "notes": "SDK bug report"
+    },
+    {
+      "id": "case_019",
+      "email": "The mobile app crashes immediately on launch on iOS 18.1. Here is the stack trace attached.",
+      "expected_category": "technical",
+      "expected_summary": "Customer reports immediate app crash on iOS 18.1 with attached stack trace.",
+      "difficulty": "easy",
+      "notes": "Mobile OS compatibility bug"
+    },
+    {
+      "id": "case_020",
+      "email": "Websocket connection drops every 60 seconds with close code 1006. Is there a heartbeat ping required?",
+      "expected_category": "technical",
+      "expected_summary": "Customer reports abnormal websocket disconnections with code 1006 and asks about heartbeat configuration.",
+      "difficulty": "medium",
+      "notes": "Protocol configuration / network issue"
+    },
+    {
+      "id": "case_021",
+      "email": "The search indexing job has been stuck on 'Processing (98%)' for over 18 hours.",
+      "expected_category": "technical",
+      "expected_summary": "Customer reports a background search indexing job stuck at 98% progress.",
+      "difficulty": "medium",
+      "notes": "Background worker deadlock"
+    },
+    {
+      "id": "case_022",
+      "email": "SSO SAML assertions are failing with error 'AudienceRestriction mismatch'. We use Okta as our IdP.",
+      "expected_category": "technical",
+      "expected_summary": "Customer reports Okta SAML SSO assertion failures due to an audience restriction mismatch.",
+      "difficulty": "hard",
+      "notes": "Intersection of authentication and technical protocol error"
+    },
+    {
+      "id": "case_023",
+      "email": "PDF rendering is missing Japanese and Korean Unicode characters, showing empty boxes instead.",
+      "expected_category": "technical",
+      "expected_summary": "Customer reports CJK font rendering failure resulting in placeholder boxes in generated PDFs.",
+      "difficulty": "medium",
+      "notes": "Encoding and font rendering bug"
+    },
+    {
+      "id": "case_024",
+      "email": "I forgot my password and the reset link emailed to me says 'Token expired or invalid'. Please send a fresh one.",
+      "expected_category": "account",
+      "expected_summary": "Customer cannot reset their password because the reset token expired and requests a new link.",
+      "difficulty": "easy",
+      "notes": "Password reset flow"
+    },
+    {
+      "id": "case_025",
+      "email": "My phone was stolen so I cannot get my Google Authenticator 2FA code. How do I recover my account?",
+      "expected_category": "account",
+      "expected_summary": "Customer lost their 2FA device and needs account recovery assistance.",
+      "difficulty": "easy",
+      "notes": "Two-factor authentication lockout"
+    },
+    {
+      "id": "case_026",
+      "email": "Please transfer the Workspace Owner role from alice@company.com (who left the company) to bob@company.com.",
+      "expected_category": "account",
+      "expected_summary": "Customer requests transferring workspace ownership from a departed employee to a new administrator.",
+      "difficulty": "medium",
+      "notes": "Role and ownership transfer"
+    },
+    {
+      "id": "case_027",
+      "email": "Under GDPR Article 17, I request complete deletion of my account and all associated personal data.",
+      "expected_category": "account",
+      "expected_summary": "Customer submits a GDPR Right to Erasure request for account and personal data deletion.",
+      "difficulty": "medium",
+      "notes": "GDPR account deletion request"
+    },
+    {
+      "id": "case_028",
+      "email": "How do I invite external contractor members with Read-Only permissions so they cannot edit production dashboards?",
+      "expected_category": "account",
+      "expected_summary": "Customer asks how to invite contractors with restricted read-only permissions.",
+      "difficulty": "easy",
+      "notes": "Permission configuration inquiry"
+    },
+    {
+      "id": "case_029",
+      "email": "I need to change the primary login email address from john.doe@oldfirm.com to john@newfirm.com.",
+      "expected_category": "account",
+      "expected_summary": "Customer requests updating their primary account login email address.",
+      "difficulty": "easy",
+      "notes": "Account profile update"
+    },
+    {
+      "id": "case_030",
+      "email": "Someone in Russia attempted to log into my account according to the security alert. Please lock it down.",
+      "expected_category": "account",
+      "expected_summary": "Customer reports a suspicious unauthorized login attempt and requests security lockdown.",
+      "difficulty": "medium",
+      "notes": "Security incident / account lock"
+    },
+    {
+      "id": "case_031",
+      "email": "Our team SSO enforces Google Workspace login, but one external auditor needs email+password access.",
+      "expected_category": "account",
+      "expected_summary": "Customer inquires about bypassing SSO enforcement for an external auditor.",
+      "difficulty": "hard",
+      "notes": "SSO authentication policy edge case"
+    },
+    {
+      "id": "case_032",
+      "email": "Why is my account showing as 'Suspended for Terms of Service review'? We haven't violated anything.",
+      "expected_category": "account",
+      "expected_summary": "Customer appeals an unexpected account suspension for terms of service review.",
+      "difficulty": "medium",
+      "notes": "Account suspension appeal"
+    },
+    {
+      "id": "case_033",
+      "email": "Can we merge two separate team accounts into one unified organization without losing our historical dashboards?",
+      "expected_category": "account",
+      "expected_summary": "Customer asks if two team accounts can be merged while preserving dashboard history.",
+      "difficulty": "medium",
+      "notes": "Organization consolidation"
+    },
+    {
+      "id": "case_034",
+      "email": "Where are your European data centers physically located? Our compliance department requires confirmation of Frankfurt hosting.",
+      "expected_category": "general",
+      "expected_summary": "Customer asks for verification of European data center locations for compliance purposes.",
+      "difficulty": "easy",
+      "notes": "Compliance / data residency inquiry"
+    },
+    {
+      "id": "case_035",
+      "email": "Do you have an affiliate or referral partner program for digital marketing agencies?",
+      "expected_category": "general",
+      "expected_summary": "Customer asks about agency affiliate or partnership program opportunities.",
+      "difficulty": "easy",
+      "notes": "Partnership inquiry"
+    },
+    {
+      "id": "case_036",
+      "email": "We love your product! Would your CEO or Head of AI be interested in being a keynote speaker at PyCon next spring?",
+      "expected_category": "general",
+      "expected_summary": "Customer invites company leadership to give a keynote presentation at PyCon.",
+      "difficulty": "easy",
+      "notes": "Event speaking invitation"
+    },
+    {
+      "id": "case_037",
+      "email": "Are you hiring senior distributed systems engineers in North America? Where should I send my CV?",
+      "expected_category": "general",
+      "expected_summary": "Customer inquires about engineering job openings and recruiting contacts.",
+      "difficulty": "easy",
+      "notes": "Careers / recruiting inquiry"
+    },
+    {
+      "id": "case_038",
+      "email": "Could you provide your latest SOC2 Type II certification and ISO 27001 summary report under NDA?",
+      "expected_category": "general",
+      "expected_summary": "Customer requests SOC2 Type II and ISO 27001 security compliance documentation under NDA.",
+      "difficulty": "medium",
+      "notes": "Security compliance documentation request"
+    },
+    {
+      "id": "case_039",
+      "email": "Is there a roadmap for supporting dark mode on the mobile web interface?",
+      "expected_category": "general",
+      "expected_summary": "Customer inquires about public roadmap plans for mobile web dark mode.",
+      "difficulty": "easy",
+      "notes": "Feature request / roadmap inquiry"
+    },
+    {
+      "id": "case_040",
+      "email": "What are your standard support operating hours and phone contact numbers for emergency SLA incidents?",
+      "expected_category": "general",
+      "expected_summary": "Customer requests support operating hours and emergency contact details.",
+      "difficulty": "easy",
+      "notes": "Support policy inquiry"
+    },
+    {
+      "id": "case_041",
+      "email": "help",
+      "expected_category": "general",
+      "expected_summary": "Customer sends a single-word message asking for help without context.",
+      "difficulty": "hard",
+      "notes": "Extremely short email with no domain context"
+    },
+    {
+      "id": "case_042",
+      "email": "URGENT PLEASE CALL ME BACK 555-0192 MY SYSTEM BROKE DOWN",
+      "expected_category": "technical",
+      "expected_summary": "Customer urgently requests a phone callback regarding a broken system.",
+      "difficulty": "hard",
+      "notes": "All-caps high-urgency crash without technical details"
+    },
+    {
+      "id": "case_043",
+      "email": "Bonjour, je n'arrive pas à télécharger ma facture de septembre. Le bouton est inactif.",
+      "expected_category": "billing",
+      "expected_summary": "Customer reports being unable to download their September invoice in French.",
+      "difficulty": "hard",
+      "notes": "Non-English (French) invoice download issue; could be mistaken for technical bug"
+    },
+    {
+      "id": "case_044",
+      "email": "Hola, olvidé mi contraseña y no recibo el correo de recuperación. Ayuda por favor.",
+      "expected_category": "account",
+      "expected_summary": "Customer states in Spanish that they forgot their password and are not receiving recovery emails.",
+      "difficulty": "hard",
+      "notes": "Non-English (Spanish) account recovery"
+    },
+    {
+      "id": "case_045",
+      "email": "I am unable to login because my billing card failed and your system blocked my profile access.",
+      "expected_category": "billing",
+      "expected_summary": "Customer is locked out of their account due to a failed payment card.",
+      "difficulty": "hard",
+      "notes": "Ambiguous multi-intent: login lockout caused directly by billing failure"
+    },
+    {
+      "id": "case_046",
+      "email": "plz hlp!! cannt login pwrd wrng thx",
+      "expected_category": "account",
+      "expected_summary": "Customer struggles to log in due to an incorrect password with heavy typos.",
+      "difficulty": "hard",
+      "notes": "Heavy internet shorthand and typos"
+    },
+    {
+      "id": "case_047",
+      "email": "I want to cancel everything and get a full refund because the app crashes every time I load my projects.",
+      "expected_category": "billing",
+      "expected_summary": "Customer demands cancellation and a full refund due to frequent application crashes.",
+      "difficulty": "hard",
+      "notes": "Crash mentioned, but actionable core resolution sought is cancellation and refund"
+    },
+    {
+      "id": "case_048",
+      "email": "Amazing release notes! Just wondering if the new webhook signature validation supports SHA-256 HMAC?",
+      "expected_category": "technical",
+      "expected_summary": "Customer asks if webhook signature validation supports SHA-256 HMAC.",
+      "difficulty": "medium",
+      "notes": "Compliment leading into technical API question"
+    },
+    {
+      "id": "case_049",
+      "email": "Can you change our billing email to invoice@acme.corp without altering the primary admin account?",
+      "expected_category": "billing",
+      "expected_summary": "Customer asks to configure a separate dedicated invoice notification email.",
+      "difficulty": "medium",
+      "notes": "Billing contact setting vs account profile"
+    },
+    {
+      "id": "case_050",
+      "email": "Our server cron job failed with '429 Too Many Requests'. What are the exact rate limits for our tier?",
+      "expected_category": "technical",
+      "expected_summary": "Customer inquires about rate limit thresholds after receiving HTTP 429 errors in a cron job.",
+      "difficulty": "medium",
+      "notes": "API rate limit question"
+    },
+    {
+      "id": "case_051",
+      "email": "Who is the data privacy officer (DPO) for your organization?",
+      "expected_category": "general",
+      "expected_summary": "Customer asks for the identity or contact info of the company Data Privacy Officer.",
+      "difficulty": "easy",
+      "notes": "General privacy officer inquiry"
+    },
+    {
+      "id": "case_052",
+      "email": "Why did my monthly subscription charge increase by $10 without any advance email notification?",
+      "expected_category": "billing",
+      "expected_summary": "Customer asks why their monthly fee increased by $10 without prior notice.",
+      "difficulty": "easy",
+      "notes": "Price increase dispute"
+    },
+    {
+      "id": "case_053",
+      "email": "The search bar returns zero results whenever an apostrophe is entered in the query string.",
+      "expected_category": "technical",
+      "expected_summary": "Customer reports that search queries containing apostrophes return no results.",
+      "difficulty": "medium",
+      "notes": "Query parser sanitization bug"
+    },
+    {
+      "id": "case_054",
+      "email": "Can we enable mandatory two-factor authentication across all 150 members of our enterprise organization?",
+      "expected_category": "account",
+      "expected_summary": "Customer asks how to enforce company-wide 2FA across all organization members.",
+      "difficulty": "medium",
+      "notes": "Organization-wide 2FA policy"
+    },
+    {
+      "id": "case_055",
+      "email": "Your documentation page on rate limits links to a 404 page.",
+      "expected_category": "general",
+      "expected_summary": "Customer reports a broken 404 link on the rate limiting documentation page.",
+      "difficulty": "medium",
+      "notes": "Broken doc link; could be viewed as technical or general documentation feedback"
+    }
+  ]
+}

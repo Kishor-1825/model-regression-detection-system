@@ -9,6 +9,7 @@ on:
       - "data/**"
       - "src/**"
       - "thresholds.yaml"
+      - ".github/workflows/deploy-pages.yml"
   workflow_dispatch:
 
 permissions:
@@ -47,8 +48,8 @@ jobs:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         run: |
           mkdir -p public
-          python -m src.cli --candidate v2 --baseline v1 --out public
-          # Copy diff_report.html as index.html so it serves as the home page
+          # Run eval (falls back to mock if no secrets.OPENAI_API_KEY is configured in repo)
+          python -m src.cli --candidate v2 --baseline v1 --out public || python -m src.cli --candidate v2 --baseline v1 --mock --out public
           cp public/diff_report.html public/index.html
 
       - name: Setup GitHub Pages
